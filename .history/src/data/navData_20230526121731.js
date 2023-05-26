@@ -19,3 +19,5 @@ const navData = [
 ]
 
 export default navData;
+
+<a href="http://office-machii.com/script/mailform/contact/">お問い合わせフォーム</a>

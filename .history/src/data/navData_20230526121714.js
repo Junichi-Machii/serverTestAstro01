@@ -14,8 +14,10 @@ const navData = [
   },
   {
     name: "Contact",
-    path: "http://office-machii.com/script/mailform/contact/",
+    path: "/contact/",
   },
 ]
 
 export default navData;
+
+<a href="http://office-machii.com/script/mailform/contact/">お問い合わせフォーム</a>
