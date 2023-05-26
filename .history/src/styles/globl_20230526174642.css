@@ -816,14 +816,16 @@ tr > th,
   }
 
   input[type=text],
-  input[type=password] {
+  input[type=password], {
     width: 380px;
   }
-
   textarea {
-    width: 410px;
+    width: 41;
   }
 
+  #wrapper {
+    width: 100%;
+  }
 
 }
 

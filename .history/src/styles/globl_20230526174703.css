@@ -819,11 +819,14 @@ tr > th,
   input[type=password] {
     width: 380px;
   }
-
+  
   textarea {
     width: 410px;
   }
 
+  #wrapper {
+    width: 100%;
+  }
 
 }
 

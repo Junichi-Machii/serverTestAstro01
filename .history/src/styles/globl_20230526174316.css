@@ -796,8 +796,11 @@ header {
   margin: auto;
 }
 
-tr > th,
-  tr > td {
+
+@media screen and (min-width:7px) and (max-width:780px) {
+
+  tr  th,
+  .table td {
     display: block;
   }
 
@@ -807,23 +810,9 @@ tr > th,
     width: 100%;
   }
 
-
-@media screen and (min-width:780px)  {
-
-  tr > th,
-  tr > td {
-    display: flex;
+  #wrapper {
+    width: 100%;
   }
-
-  input[type=text],
-  input[type=password] {
-    width: 380px;
-  }
-
-  textarea {
-    width: 410px;
-  }
-
 
 }
 
