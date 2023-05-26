@@ -796,7 +796,7 @@ header {
 }
 
 
-@media screen and (min-width:7px) and (max-width:768px) {
+@media --md {
 
   .table th,
   .table td {

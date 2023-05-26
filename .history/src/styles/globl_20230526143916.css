@@ -266,9 +266,8 @@ button:hover {
   font-weight: 700;
 }
 
-.button_box.link {
+.button_box .link {
   margin: 0 auto;
-  padding: 0 8px;
 }
 
 .link {
@@ -796,7 +795,7 @@ header {
 }
 
 
-@media screen and (min-width:7px) and (max-width:768px) {
+@media --md {
 
   .table th,
   .table td {
