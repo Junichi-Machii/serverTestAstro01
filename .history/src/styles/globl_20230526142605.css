@@ -795,21 +795,17 @@ header {
 }
 
 
-@media --md {
-
+@media screen and (max-width:780px){
   .table th,
-  .table td {
-    display: block;
+  .table td{
+      display:block;
   }
 
-  input[type=text],
-  input[type=password],
-  textarea {
-    width: 100%;
-  }
-
-  #wrapper {
-    width: 100%;
-  }
+input[type=text], input[type=password], textarea {
+width: 100%;
+}
+#wrapper {
+width: 100%;
+}
 
 }
