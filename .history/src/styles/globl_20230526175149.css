@@ -795,3 +795,15 @@ header {
   display: block;
   margin: auto;
 }
+
+tr > th,
+  tr > td {
+    display: block;
+  }
+
+  input[type=text],
+  input[type=password],
+  textarea {
+    width: 100%;
+  }
+
