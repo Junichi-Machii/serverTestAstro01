@@ -1,0 +1,42 @@
+---
+// component imports
+import MainLayout from "../layouts/MainLayout.astro";
+import anime from "animejs/lib/anime.es.js";
+import { Icon } from "astro-icon";
+import { Sprite } from "astro-icon";
+
+import { formatBlogPosts } from "../js/utils";
+
+// const allPosts = await Astro.glob("./*.md");
+// const formattedPosts = formatBlogPosts(allPosts, {
+//   limit: 3,
+// });
+---
+
+<MainLayout title="My Blog">
+  <div id="container">
+    <div
+      class="bound top-1/2 left-1/2 text-center sm:text-3xl md:text-4xl lg:text-5xl"
+    >
+      <span class="char">J</span>
+      <span class="char">N</span>
+      <span class="char">I</span>
+      <span class="char">C</span>
+      <span class="char">H</span>
+      <span class="char">I</span>
+      <span class="char">&ensp;</span>
+      <span class="char">M</span>
+      <span class="char">A</span>
+      <span class="char">C</span>
+      <span class="char">H</span>
+      <span class="char">I</span>
+      <span class="char">I</span>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+
+</style>
+
+

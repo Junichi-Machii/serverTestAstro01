@@ -1,0 +1,86 @@
+---
+// component imports
+import Link from "../components/Link.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
+const skills = [
+  { skill: "HTML" },
+  { skill: "CSS" },
+  { skill: "JavaScript" },
+  { skill: "WordPress" },
+  { skill: "Next.js" },
+  { skill: "Astro" },
+  { skill: "React" },
+  { skill: "Tailwind CSS" },
+  { skill: "GitHub" },
+  { skill: "Figma" },
+]
+---
+
+<MainLayout title="Skills" description="My Skill Page">
+  <section class="mt-10" aria-label="Skills">
+    <!-- <div class="my-12 pb-12 md:pt-16 md:pb-48 "> -->
+    <h1 class=" text-center font-bold text-4xl">
+      Skills
+      <hr class="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
+    </h1>
+    <div class="flex flex-col space-y-10 items-stretch justify-center align-top md:space-x-10 md:space-y-0 md:p-16 max-w-screen-2xl p-10 md:flex-row md:text-left ">
+      <div class="md:w-1/2 ">
+        <h1 class="text-center text-2xl font-bold mb-6 md:text-left">
+          Get to know me!
+        </h1>
+        <p>
+          Hi, my name is Junichi and I am a{" "}
+          <span class="font-bold">{"highly ambitious"}</span>,
+          <span class="font-bold">{" self-motivated"}</span>, and
+          <span class="font-bold">{" driven"}</span> Front end engineer
+          based in Kanagawa, Japan.
+        </p>
+        <br />
+        <p>
+          I have a wide range of hobbies and passions that keep me busy.
+          From reading, playing sports, traveling, to making YouTube videos,
+          I am always seeking new experiences and love to keep myself
+          engaged and learning new things.
+        </p>
+        <br />
+        <p>
+          I believe that you should{" "}
+          <span class="font-bold text-teal-500">
+            never stop growing
+          </span>{" "}
+          and that&#39;s what I strive to do, I have a passion for
+          technology and a desire to always push the limits of what is
+          possible. I am excited to see where my career takes me and am
+          always open to new opportunities. 🙂
+        </p>
+      </div>
+      <div class="text-center md:w-1/2 md:text-left">
+        <h1 class="text-2xl font-bold mb-6">My Skills</h1>
+        <div class="flex flex-wrap flex-row justify-center z-10 md:justify-start">
+          {skills.map((item, idx) => {
+            return (
+              <p
+               
+                class="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold"
+              >
+                {item.skill}
+              </p>
+            )
+          })}
+        </div>
+
+      </div>
+    </div>
+  <!-- </div> -->
+  </section>
+  <section class="container about" aria-label="About Me">
+    <img src="/images/my-headshot.jpg" class="" alt="My headshot" width="200" height="300" />
+    <div class="content">
+      
+      <p class="mt-10 text-base">私のポートフォリオサイトをご覧いただきありがとうございます。</p>
+      <p class="text-base">現在JavascriptとFlutterをメインに日々鍛錬しています。</p>
+      <Link classes="mt-2" href="#" style="primary" text="contact me" />
+    </div>
+  </section>
+</MainLayout>
