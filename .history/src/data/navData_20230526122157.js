@@ -14,7 +14,7 @@ const navData = [
   },
   {
     name: "Contact",
-    path: "/script/mailform/contact/",
+    path: "http://o/script/mailform/contact/",
   },
 ]
 
