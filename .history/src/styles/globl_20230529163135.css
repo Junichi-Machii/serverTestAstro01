@@ -362,9 +362,8 @@ button:hover {
   }
 }
 
-a,
-h1 {
-  color: #333;
+a, h1 {
+  color: #000;
 }
 
 
