@@ -12,28 +12,33 @@ const formattedPosts = formatBlogPosts(allPosts, {
 ---
 
 <MainLayout title="My Blog">
-  <div class="bg-img">
-    <img src="/images/hero07.png" class="" alt="My headshot" />
-  </div>
   <section class="container" aria-label="New Blog Posts">
+    <div class="bg-img">
+      <img
+      src="/images/Hero06.png"
+      class=""
+      alt="My headshot"
+     
+    />
+    </div>
     <h2 class="h2 text-center">New Blog Posts</h2>
     <div class="post-container">
       {
-        formattedPosts.map((post) => (
-          <PostCard
-            frontmatter={post.frontmatter}
-            url={post.url}
-            tagType="h3"
-          />
-        ))
+        formattedPosts.map((post) => <PostCard frontmatter={post.frontmatter}
+        url={post.url} tagType="h3"/>)
       }
     </div>
   </section>
 </MainLayout>
 
 <style>
-  .bg-img {
-    width: 100%;
-    height: auto;
-  }
+.bg-img {
+  width: 100%;
+  height: auto;
+
+
+  background: url(/public/images/Hero06.png) no-repeat center center cover ;
+}
 </style>
+
+
