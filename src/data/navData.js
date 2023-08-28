@@ -16,6 +16,10 @@ const navData = [
     name: "Contact",
     path: "/script/mailform/contact/",
   },
+  {
+    name: "Github",
+    path: "https://github.com/Junichi-Machii",
+  },
 ]
 
 export default navData;

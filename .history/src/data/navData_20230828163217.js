@@ -14,10 +14,12 @@ const navData = [
   },
   {
     name: "Contact",
-    path: "http://office-machii.com/script/mailform/contact/",
+    path: "/script/mailform/contact/",
+  },
+  {
+    name: "Github",
+    path: "https://github.com/Junichi-Machii",
   },
 ]
 
 export default navData;
-
-<a href="http://office-machii.com/script/mailform/contact/">お問い合わせフォーム</a>
