@@ -1,0 +1,104 @@
+---
+// component imports
+import Link from "../components/Link.astro";
+import { Icon } from "astro-icon";
+import { Image } from 'astro:assets'
+import MainLayout from "../layouts/MainLayout.astro";
+// import { Sprite } from 'astro-icon'
+import { slugify, formatDate } from "../js/utils";
+
+const { frontmatter, url, tagType } = Astro.props;
+
+const projects = [
+  {
+    name: "世界の天気検索アプリ",
+    description:
+      "世界の天気を調べるアプリを作りました。React、Typescriptを使用。fetch()やuseStateについて学ぶことができた。 プロキシサーバーのせっていができていないのでそちらもチャレンジしていきたい。",
+    image: "/images/weather-app.png",
+
+    github:
+      "https://github.com/Junichi-Machii/react-tyepscript-app-weather-001",
+
+    link: "https://react-typescript-app-weather001.netlify.app/",
+  },
+  {
+    name: "メモ帳アプリ",
+    description:
+      "javascriptでメモアプリを作成しました。データはローカルストレージに保存されます。画面更新をしてもデータは残り削除ボタンでローカルストレージからも削除されます。",
+    image: "/images/memo-app.png",
+
+    github: "https://github.com/Junichi-Machii/js-app-note-001",
+
+    link: "https://js-note-app-office-machii.netlify.app/",
+  },
+  {
+    name: "React-card-component",
+    description:
+      "Reactで作成したカードコンポーネント。バッジ、ボタン、アイコンなどシンプルで編集しやすいレスポンシブデザイン。",
+    image: "/images/card-component-react.png",
+
+    github: "https://github.com/Junichi-Machii/react-card-component",
+
+    link: "https://card-component-react-office-machii.netlify.app/#",
+  },
+  {
+    name: "Flutter-Meals-App",
+    description:
+      "Flutter/Dartで作成した料理カタログアプリケーション。お気に入りタブやフィルター機能、料理写真をHiroWigetdで動きを出している",
+    image: "/images/fluttr-meals-app.png",
+
+    github: "https://github.com/Junichi-Machii/flutter_meals_app01",
+
+    link: "https://flutter-meal-webapp.firebaseapp.com/#/",
+  },
+];
+---
+
+<MainLayout title="Projects" description="My projects Page">
+  <section class="mt-10" aria-label="Projects">
+    <h1 class="mb-10 text-center font-bold text-4xl">
+      Projects
+      <hr class="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded" />
+    </h1>
+  </section>
+
+  <div class="flex flex-col md:p-16 p-10 space-y-28">
+    {
+      projects.map((project, idx) => {
+        return (
+          <div>
+            <div class="flex flex-col  animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
+              <div class="content mb-8 md:w-1/2">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={project.image}
+                    alt="アプリケーションのスクリーンショット"
+                  />
+                </a>
+              </div>
+              <div class="mb-8 md:w-1/2">
+                <h1 class="text-4xl font-bold mb-6">{project.name}</h1>
+                <p class="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
+                  {project.description}
+                </p>
+                <div class="flex flex-row align-bottom space-x-4">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon name="grommet-icons:github" class="w-12" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+</MainLayout>

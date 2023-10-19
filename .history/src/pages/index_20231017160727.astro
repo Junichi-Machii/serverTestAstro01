@@ -1,0 +1,41 @@
+---
+// component imports
+import MainLayout from "../layouts/MainLayout.astro";
+import PostCard from "../components/PostCard.astro";
+import Link from "../components/Link.astro";
+import { formatBlogPosts } from "../js/utils";
+import { Image } from "astro:assets";
+import myheadshot from "../public/images/hero07.png";
+
+const allPosts = await Astro.glob("./blog/*.md");
+const formattedPosts = formatBlogPosts(allPosts, {
+  limit: 3,
+});
+---
+
+<MainLayout title="My Blog">
+  <div class="bg-img">
+    <img src="/public/images/hero07.png" alt="My headshot" />
+  </div>
+  <section class="container" aria-label="New Blog Posts">
+    <h2 class="h2 text-center">New Blog Posts</h2>
+    <div class="post-container">
+      {
+        formattedPosts.map((post) => (
+          <PostCard
+            frontmatter={post.frontmatter}
+            url={post.url}
+            tagType="h3"
+          />
+        ))
+      }
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .bg-img {
+    width: 100%;
+    height: auto;
+  }
+</style>
