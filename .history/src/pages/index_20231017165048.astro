@@ -4,6 +4,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 import PostCard from "../components/PostCard.astro";
 import Link from "../components/Link.astro";
 import { formatBlogPosts } from "../js/utils";
+import { Image } from "astro:assets";
+import myheadshot from "../../../images/hero07.png";
 
 const allPosts = await Astro.glob("./blog/*.md");
 const formattedPosts = formatBlogPosts(allPosts, {
@@ -13,7 +15,7 @@ const formattedPosts = formatBlogPosts(allPosts, {
 
 <MainLayout title="My Blog">
   <div class="bg-img">
-   
+    <Image src={myheadshot} alt="My headshot" />
   </div>
   <section class="container" aria-label="New Blog Posts">
     <h2 class="h2 text-center">New Blog Posts</h2>

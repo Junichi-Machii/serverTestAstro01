@@ -8,9 +8,8 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
 
   integrations: [
-//     image({
-//     serviceEntryPoint: '@astrojs/image/sharp'
-//   }), 
-  tailwind()
+    image({
+    serviceEntryPoint: '@astrojs/image/sharp'
+  }), tailwind()
 ]
 });

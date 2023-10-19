@@ -1,7 +1,7 @@
 ---
 
 //library imports
-import { Image } from 'astro:assets';
+import { Image } from "@astrojs/image/components";
 import Link from "./Link.astro";
 
 // utils imports
@@ -29,7 +29,9 @@ const { title, date, author, image, description, category} = frontmatter;
     width="400"
     height="250"
     format="webp"
+    fit="cover"
     quality={80}
+    aspectRatio="4:1"
     />
     </a>
     <div class="content">

@@ -1,0 +1,18 @@
+---
+// component imports
+import Link from "../components/Link.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="About" description="My About Page">
+  <section class="container about" aria-label="About Me">
+    <img src="/images/my-headshot.jpg" class="" alt="My headshot" width="200" height="300" />
+    <div class="content">
+      <h1 class="text-2xl">My Blog</h1>
+      
+      <p class="text-base">私のポートフォリオサイトをご覧いただきありがとうございます。</p>
+      <p class="text-base">現在JavascriptとFlutterをメインに学習しています。</p>
+      <Link href="#" style="primary" text="contact me" />
+    </div>
+  </section>
+</MainLayout>

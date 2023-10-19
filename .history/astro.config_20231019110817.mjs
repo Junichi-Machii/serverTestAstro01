@@ -10,7 +10,6 @@ export default defineConfig({
   integrations: [
 //     image({
 //     serviceEntryPoint: '@astrojs/image/sharp'
-//   }), 
-  tailwind()
+//   }), tailwind()
 ]
 });
