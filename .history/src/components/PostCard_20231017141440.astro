@@ -1,7 +1,7 @@
 ---
 
 //library imports
-import { Image } from 'astro:assets';
+import { Image } from "@astrojs/image/components";
 import Link from "./Link.astro";
 
 // utils imports
@@ -29,12 +29,16 @@ const { title, date, author, image, description, category} = frontmatter;
     width="400"
     height="250"
     format="webp"
+    fit="cover"
     quality={80}
+    aspectRatio="4:1"
+    transition:name={`image-${url}`}
     />
     </a>
     <div class="content">
       <div>
-        <Tag class="h3">
+        <Tag class="h3" transition:name={`image-${url}`}
+        >
           <a href={url}>{title}</a>
         </Tag>
         <small>by <a href={`/author/${slugify(author)}/`}>{author}</a>
